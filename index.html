@@ -1,48 +1,127 @@
-ANAND Civil Engineering
-ನಿಮ್ಮ Civil Engineering ಕೆಲಸಗಳಿಗೆ ಸರಳ Tools 🏗️
-
-📏 Measurements
-🧮 Concrete
-📚 Civil Notes
-📏 Building Measurements
-ಉದ್ದ ಮತ್ತು ಅಗಲ ಕೊಟ್ಟು ನೆಲದ Area ಲೆಕ್ಕ ಹಾಕಿ.
-
-ಉದ್ದ (Length — metre)
-ಉದಾ: 10
-ಅಗಲ (Width — metre)
-ಉದಾ: 5
-ಎತ್ತರ (Height — metre), Volumeಗೆ
-ಉದಾ: 3
- Calculate Area & Volume
-ಫಲಿತಾಂಶ ಇಲ್ಲಿ ಕಾಣಿಸುತ್ತದೆ.
-🧮 Concrete Volume Calculator
-Slab, Beam ಅಥವಾ Footingನ ಸರಳ ಆಯತಾಕಾರದ ಭಾಗಕ್ಕೆ ಲೆಕ್ಕ ಹಾಕಿ.
-
-ಉದ್ದ (metre)
-ಉದಾ: 5
-ಅಗಲ (metre)
-ಉದಾ: 3
-ದಪ್ಪ / ಎತ್ತರ (metre)
-ಉದಾ: 0.12
- Calculate Concrete
-ಫಲಿತಾಂಶ ಇಲ್ಲಿ ಕಾಣಿಸುತ್ತದೆ.
-ಇದು ಜ್ಯಾಮಿತೀಯ Volume ಮಾತ್ರ. ನಿಜವಾದ ನಿರ್ಮಾಣಕ್ಕೆ Structural Engineerನ drawing, specifications ಮತ್ತು site conditions ಅನುಸರಿಸಬೇಕು.
-
-📚 Civil Engineering Notes
-1. Rectangle Area
-Area = Length × Width
-ಘಟಕ: square metre (m²)
-2. Cuboid Volume
-Volume = Length × Width × Height
-ಘಟಕ: cubic metre (m³)
-3. Concrete Volume
-ಆಯತಾಕಾರದ Slabಗೆ: Length × Width × Thickness
-4. Unit Conversion
-1 metre = 1000 millimetres
-1 square metre = 10.7639 square feet (ಸುಮಾರು)
-1 cubic metre = 1000 litres
-5. Concrete Mix
-Mix ratio ಮತ್ತು Cement, Sand, Aggregate ಪ್ರಮಾಣವು ನಿರ್ದಿಷ್ಟ Mix Design ಹಾಗೂ Project Specification ಮೇಲೆ ಅವಲಂಬಿತ. ಕೇವಲ ಸಾಮಾನ್ಯ ratio ಆಧರಿಸಿ Structural Concrete ನಿರ್ಧರಿಸಬೇಡಿ.
-© 2026 ANAND Civil Engineering
-
-Learn • Measure • Build
+<!DOCTYPE html>  <html lang="kn">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<meta name="description" content="ANAND Civil Engineering: measurement tools, concrete and material estimates, steel weight calculator, building layout and Diploma Civil notes.">  
+<title>ANAND Civil Engineering Tools</title>  
+<style>  
+:root{--navy:#102a43;--blue:#1769aa;--teal:#087e8b;--bg:#f2f6fa;--ink:#172b3a;--muted:#607487;--card:#fff;--line:#d9e3ec}  
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,"Noto Sans Kannada",sans-serif;line-height:1.6}  
+header{background:linear-gradient(130deg,#102a43,#1769aa);color:#fff;text-align:center;padding:28px 14px}header h1{margin:0;color:#7ee7f5;font-size:clamp(26px,5vw,38px)}header p{margin:5px 0 0}  
+nav{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:12px;background:#183b56;position:sticky;top:0;z-index:5}nav a{color:#fff;text-decoration:none;background:#285577;padding:7px 11px;border-radius:9px;font-size:14px}  
+main{max-width:980px;margin:auto;padding:14px}.intro{background:#e1f5fe;border:1px solid #b8e8f6;padding:14px;border-radius:13px;margin:12px 0}  
+.card{background:var(--card);padding:18px;margin:15px 0;border:1px solid var(--line);border-radius:15px;box-shadow:0 4px 15px #17324d0a}  
+h2{margin:0 0 8px;color:var(--blue);font-size:22px}h3{margin:12px 0 4px;font-size:17px}.muted,.small{color:var(--muted);font-size:13px}  
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.field{margin:9px 0}label{display:block;font-weight:700;font-size:14px}input,select,textarea{width:100%;padding:11px;border:1px solid #b9c8d5;border-radius:9px;font-size:16px;background:#fff;color:var(--ink)}button{border:0;border-radius:9px;padding:11px 15px;background:var(--teal);color:#fff;font-size:15px;font-weight:700;cursor:pointer;margin:7px 5px 3px 0}button.secondary{background:#e3edf5;color:#183b56}button:focus,a:focus,input:focus,select:focus{outline:3px solid #8bd9e6;outline-offset:2px}  
+.result{margin-top:12px;padding:12px;background:#e8f7f8;border:1px solid #b8e8e6;border-radius:10px;overflow-wrap:anywhere;min-height:42px}.note{background:#f7fafc;border-left:4px solid var(--teal);padding:12px;margin:10px 0;border-radius:5px}.pill{display:inline-block;background:#e4f1ff;color:#145da0;padding:3px 8px;border-radius:20px;font-size:12px}  
+footer{text-align:center;background:var(--navy);color:#fff;padding:18px;margin-top:20px}.warning{background:#fff4df;border-left:4px solid #d99000;padding:12px;border-radius:5px}.room{border:2px solid #1769aa;background:#e8f4ff;display:flex;align-items:center;justify-content:center;text-align:center;min-height:100px;margin-top:10px;padding:8px;overflow-wrap:anywhere}  
+@media(max-width:500px){main{padding:9px}.card{padding:14px}nav{position:static}nav a{font-size:13px;padding:7px 8px}}  
+</style>  
+</head>  
+<body>  
+<header>  
+  <h1>ANAND Civil Engineering</h1>  
+  <p>📐 Measure • Calculate • Learn</p>  
+  <p>Diploma Civil Engineering ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಸರಳ Tools</p>  
+</header>  
+<nav>  
+  <a href="#measure">📏 Measurements</a><a href="#concrete">🧱 Concrete</a><a href="#materials">🪨 Materials</a><a href="#steel">🔩 Steel</a><a href="#plan">🏠 Room Plan</a><a href="#notes">📚 Notes</a>  
+</nav>  
+<main>  
+<div class="intro"><b>ಸ್ವಾಗತ ಮಚ್ಚಾ!</b> ಉದ್ದ, ಅಗಲ, ಎತ್ತರವನ್ನು ಸರಿಯಾದ unitನಲ್ಲಿ ಹಾಕಿ Calculate ಒತ್ತು. ಈ tools ಕಲಿಕೆ ಮತ್ತು ಪ್ರಾಥಮಿಕ ಅಂದಾಜಿಗೆ ಮಾತ್ರ; ನಿಜವಾದ ನಿರ್ಮಾಣದ ಅಳತೆ, mix design ಮತ್ತು reinforcement ಅನ್ನು drawings/specifications ಪ್ರಕಾರ ಅರ್ಹ Civil/Structural Engineer ಪರಿಶೀಲಿಸಬೇಕು.</div>  <section class="card" id="measure">  
+<h2>📏 1. Building Measurements</h2><p class="muted">ಉದ್ದ ಮತ್ತು ಅಗಲದಿಂದ Area; ಉದ್ದ × ಅಗಲ × ಎತ್ತರದಿಂದ Volume.</p>  
+<div class="grid">  
+<div class="field"><label for="ml">Length (metre)</label><input id="ml" type="number" min="0" step="any" placeholder="ಉದಾ: 10"></div>  
+<div class="field"><label for="mw">Width (metre)</label><input id="mw" type="number" min="0" step="any" placeholder="ಉದಾ: 5"></div>  
+<div class="field"><label for="mh">Height (metre)</label><input id="mh" type="number" min="0" step="any" placeholder="ಉದಾ: 3"></div>  
+</div><button onclick="measure()">Calculate</button><button class="secondary" onclick="clearFields(['ml','mw','mh'],'measureResult')">Clear</button><div class="result" id="measureResult" aria-live="polite">ಫಲಿತಾಂಶ ಇಲ್ಲಿ ಕಾಣಿಸುತ್ತದೆ.</div>  
+</section>  <section class="card" id="concrete">  
+<h2>🧱 2. Concrete Volume Calculator</h2><p class="muted">Rectangular slab/beam/footingನ ಜ್ಯಾಮಿತೀಯ volume.</p>  
+<div class="grid">  
+<div class="field"><label for="cl">Length (m)</label><input id="cl" type="number" min="0" step="any" placeholder="ಉದಾ: 5"></div>  
+<div class="field"><label for="cw">Width (m)</label><input id="cw" type="number" min="0" step="any" placeholder="ಉದಾ: 3"></div>  
+<div class="field"><label for="ct">Thickness/Height (m)</label><input id="ct" type="number" min="0" step="any" placeholder="ಉದಾ: 0.12"></div>  
+</div><button onclick="concrete()">Calculate Concrete Volume</button><button class="secondary" onclick="clearFields(['cl','cw','ct'],'concreteResult')">Clear</button><div class="result" id="concreteResult" aria-live="polite">ಫಲಿತಾಂಶ ಇಲ್ಲಿ ಕಾಣಿಸುತ್ತದೆ.</div>  
+</section>  <section class="card" id="materials">  
+<h2>🪨 3. Material Estimator (ಅಂದಾಜು)</h2>  
+<p>Concrete volume ನಮೂದಿಸಿ. ಕೆಳಗಿನ ratio ಕೇವಲ ಕಲಿಕೆಗಾಗಿ ಆಯ್ಕೆಮಾಡಿದ nominal mix ಉದಾಹರಣೆ; structural concreteಗೆ mix design/specification ಅನುಸರಿಸಬೇಕು.</p>  
+<div class="grid">  
+<div class="field"><label for="mv">Wet concrete volume (m³)</label><input id="mv" type="number" min="0" step="any" placeholder="ಉದಾ: 1"></div>  
+<div class="field"><label for="ratio">Example mix ratio (Cement:Sand:Aggregate)</label><select id="ratio"><option value="1,2,4">1 : 2 : 4 (ಉದಾಹರಣೆ)</option><option value="1,1.5,3">1 : 1.5 : 3 (ಉದಾಹರಣೆ)</option><option value="1,3,6">1 : 3 : 6 (ಉದಾಹರಣೆ)</option></select></div>  
+</div><button onclick="materials()">Estimate Materials</button><div class="result" id="materialResult" aria-live="polite">ಫಲಿತಾಂಶ ಇಲ್ಲಿ ಕಾಣಿಸುತ್ತದೆ.</div>  
+<p class="small">ಅಂದಾಜಿನ ವಿಧಾನ: dry volume factor 1.54; cement density 1440 kg/m³; ಒಂದು 50 kg bag. Actual wastage, moisture, bulking, grading ಮತ್ತು mix design ಕಾರಣமாக నిజವಾದ ಪ್ರಮಾಣ ಬದಲಾಗುತ್ತದೆ.</p>  
+</section>  <section class="card" id="steel">  
+<h2>🔩 4. Steel Bar Weight Calculator</h2><p class="muted">ಸಾಮಾನ್ಯ quick estimate formula: kg/m ≈ d²/162 (d = diameter in mm).</p>  
+<div class="grid">  
+<div class="field"><label for="sd">Bar diameter (mm)</label><select id="sd"><option>6</option><option>8</option><option>10</option><option>12</option><option>16</option><option>20</option><option>25</option><option>32</option></select></div>  
+<div class="field"><label for="sl">Total bar length (metre)</label><input id="sl" type="number" min="0" step="any" placeholder="ಉದಾ: 12"></div>  
+<div class="field"><label for="sq">Number of bars</label><input id="sq" type="number" min="1" step="1" value="1"></div>  
+</div><button onclick="steel()">Calculate Steel Weight</button><button class="secondary" onclick="clearFields(['sl'],'steelResult')">Clear length</button><div class="result" id="steelResult" aria-live="polite">ಫಲಿತಾಂಶ ಇಲ್ಲಿ ಕಾಣಿಸುತ್ತದೆ.</div>  
+<p class="small">ಇದು theoretical estimate ಮಾತ್ರ; actual weight, cutting length, bends, laps, cover ಮತ್ತು bar bending schedule drawing ಪ್ರಕಾರ ನಿರ್ಧರಿಸಬೇಕು.</p>  
+</section>  <section class="card" id="plan">  
+<h2>🏠 5. Simple Room Layout</h2><p class="muted">Roomನ ಒಳಗಿನ ಅಂದಾಜು ಅಳತೆ ಹಾಕಿ area ಮತ್ತು perimeter ನೋಡಿ. ಇದು scaled architectural drawing ಅಲ್ಲ.</p>  
+<div class="grid">  
+<div class="field"><label for="rl">Room length (m)</label><input id="rl" type="number" min="0" step="any" placeholder="ಉದಾ: 4"></div>  
+<div class="field"><label for="rw">Room width (m)</label><input id="rw" type="number" min="0" step="any" placeholder="ಉದಾ: 3"></div>  
+</div><button onclick="roomPlan()">Show Room Measurements</button><div class="result" id="roomResult" aria-live="polite">Room ವಿವರ ಇಲ್ಲಿ ಕಾಣಿಸುತ್ತದೆ.</div><div class="room" id="roomVisual">Room Layout Preview</div>  
+</section>  <section class="card" id="notes">  
+<h2>📚 6. Diploma Civil Engineering Notes</h2>  
+<div class="note"><b>Area:</b> Rectangle = Length × Width. ಘಟಕ: m².</div>  
+<div class="note"><b>Volume:</b> Cuboid = Length × Width × Height. ಘಟಕ: m³.</div>  
+<div class="note"><b>Perimeter:</b> Rectangle = 2 × (Length + Width).</div>  
+<div class="note"><b>Unit conversion:</b> 1 m = 1000 mm; 1 m² ≈ 10.7639 ft²; 1 m³ = 1000 litres.</div>  
+<div class="note"><b>Concrete:</b> Slab volume = Length × Width × Thickness. ಎಲ್ಲಾ ಅಳತೆಗಳು ಒಂದೇ unitನಲ್ಲಿ ಇರಲಿ.</div>  
+<div class="note"><b>Surveying:</b> Field bookನಲ್ಲಿ chainage, offset, units ಮತ್ತು readings ಸ್ಪಷ್ಟವಾಗಿ ದಾಖಲಿಸಬೇಕು; instrument calibration ಮತ್ತು site procedure ಅನುಸರಿಸಬೇಕು.</div>  
+<div class="note"><b>Soil:</b> Foundation type ನಿರ್ಧರಿಸುವ ಮೊದಲು soil investigation ಮತ್ತು structural design ಅಗತ್ಯ.</div>  
+<div class="note"><b>Drawing:</b> Plan, elevation, section ಮತ್ತು dimensionಗಳನ್ನು ಓದಲು ಅಭ್ಯಾಸ ಮಾಡು. ನಿರ್ಮಾಣಕ್ಕೆ latest approved drawing ಬಳಸು.</div>  
+<div class="note"><b>Safety:</b> PPE ಧರಿಸು; scaffolding, excavation, lifting ಮತ್ತು electrical work ಅನ್ನು ತರಬೇತಿ ಪಡೆದವರ ಮೇಲ್ವಿಚಾರಣೆಯಲ್ಲಿ ಮಾತ್ರ ಮಾಡು.</div>  
+</section>  <section class="card">  
+<h2>🔄 Unit Converter</h2>  
+<div class="grid">  
+<div class="field"><label for="uv">Value</label><input id="uv" type="number" step="any" placeholder="ಉದಾ: 10"></div>  
+<div class="field"><label for="ut">Convert</label><select id="ut"><option value="mft">metre → feet</option><option value="ftm">feet → metre</option><option value="mm">metre → millimetre</option><option value="m2ft2">m² → ft²</option><option value="m3l">m³ → litres</option></select></div>  
+</div><button onclick="convertUnit()">Convert</button><div class="result" id="unitResult" aria-live="polite">ಪರಿವರ್ತನೆ ಇಲ್ಲಿ ಕಾಣಿಸುತ್ತದೆ.</div>  
+</section>  
+</main>  
+<footer><b>ANAND Civil Engineering</b><br>Learn • Measure • Build<br><span class="small">ಶೈಕ್ಷಣಿಕ ಮತ್ತು ಪ್ರಾಥಮಿಕ ಅಂದಾಜುಗಳಿಗೆ</span></footer>  <script>  
+function val(id){return Number(document.getElementById(id).value)}  
+function positive(ids){return ids.every(id=>document.getElementById(id).value.trim()!=="" && Number.isFinite(val(id)) && val(id)>0)}  
+function out(id,html){document.getElementById(id).innerHTML=html}  
+function clearFields(ids,result){ids.forEach(id=>document.getElementById(id).value="");out(result,"ಫಲಿತಾಂಶ ಇಲ್ಲಿ ಕಾಣಿಸುತ್ತದೆ.")}  
+function measure(){  
+ if(!positive(["ml","mw","mh"])){out("measureResult","ದಯವಿಟ್ಟು ಎಲ್ಲಾ ಅಳತೆಗಳನ್ನು 0ಕ್ಕಿಂತ ಹೆಚ್ಚಿನ ಸಂಖ್ಯೆಯಲ್ಲಿ ನಮೂದಿಸಿ.");return}  
+ const l=val("ml"),w=val("mw"),h=val("mh"),a=l*w,v=a*h;  
+ out("measureResult","<b>Area:</b> "+a.toFixed(3)+" m²<br><b>Area:</b> "+(a*10.7639).toFixed(2)+" ft²<br><b>Volume:</b> "+v.toFixed(3)+" m³<br><b>Volume:</b> "+(v*1000).toFixed(1)+" litres");  
+}  
+function concrete(){  
+ if(!positive(["cl","cw","ct"])){out("concreteResult","ದಯವಿಟ್ಟು ಎಲ್ಲಾ ಅಳತೆಗಳನ್ನು 0ಕ್ಕಿಂತ ಹೆಚ್ಚಿನ ಸಂಖ್ಯೆಯಲ್ಲಿ ನಮೂದಿಸಿ.");return}  
+ const v=val("cl")*val("cw")*val("ct");  
+ out("concreteResult","<b>Concrete volume:</b> "+v.toFixed(3)+" m³<br><b>Litres:</b> "+(v*1000).toFixed(1)+" L");  
+}  
+function materials(){  
+ if(!positive(["mv"])){out("materialResult","Concrete volume ಅನ್ನು 0ಕ್ಕಿಂತ ಹೆಚ್ಚಿನ ಸಂಖ್ಯೆಯಲ್ಲಿ ನಮೂದಿಸಿ.");return}  
+ const wet=val("mv"),dry=wet*1.54,parts=document.getElementById("ratio").value.split(",").map(Number),sum=parts.reduce((a,b)=>a+b,0);  
+ const cementVol=dry*parts[0]/sum,sand=dry*parts[1]/sum,agg=dry*parts[2]/sum,bags=cementVol*1440/50;  
+ out("materialResult","<b>Dry volume used for estimate:</b> "+dry.toFixed(3)+" m³<br><b>Cement:</b> "+bags.toFixed(2)+" bags (50 kg/bag assumption)<br><b>Sand:</b> "+sand.toFixed(3)+" m³<br><b>Aggregate:</b> "+agg.toFixed(3)+" m³<br><b>Selected example ratio:</b> "+parts.join(" : ")+"<br><br><b>Important:</b> This is a learning estimate, not a construction mix design.");  
+}  
+function steel(){  
+ if(!positive(["sl","sq"])||!Number.isInteger(val("sq"))){out("steelResult","Length ಮತ್ತು bars ಸಂಖ್ಯೆಯನ್ನು ಸರಿಯಾಗಿ ನಮೂದಿಸಿ; bars ಸಂಖ್ಯೆ ಪೂರ್ಣಾಂಕವಾಗಿರಲಿ.");return}  
+ const d=val("sd"),len=val("sl"),qty=val("sq"),unit=d*d/162,weight=unit*len*qty;  
+ out("steelResult","<b>Approx. unit weight:</b> "+unit.toFixed(3)+" kg/m<br><b>Total length:</b> "+(len*qty).toFixed(2)+" m<br><b>Approx. total weight:</b> "+weight.toFixed(2)+" kg");  
+}  
+function roomPlan(){  
+ if(!positive(["rl","rw"])){out("roomResult","Room length ಮತ್ತು width ಅನ್ನು 0ಕ್ಕಿಂತ ಹೆಚ್ಚಾಗಿ ನಮೂದಿಸಿ.");return}  
+ const l=val("rl"),w=val("rw"),area=l*w,per=2*(l+w);  
+ out("roomResult","<b>Room area:</b> "+area.toFixed(2)+" m² ("+(area*10.7639).toFixed(2)+" ft²)<br><b>Perimeter:</b> "+per.toFixed(2)+" m");  
+ const scale=Math.min(280/l,160/w,45);  
+ const box=document.getElementById("roomVisual");box.style.height=Math.max(80,w*scale)+"px";box.style.maxWidth=Math.max(140,l*scale)+"px";box.style.margin="12px auto";box.textContent="Room "+l+" m × "+w+" m";  
+}  
+function convertUnit(){  
+ const raw=document.getElementById("uv").value.trim();  
+ if(raw===""||!Number.isFinite(Number(raw))){out("unitResult","ದಯವಿಟ್ಟು ಸರಿಯಾದ ಸಂಖ್ಯೆಯನ್ನು ನಮೂದಿಸಿ.");return}  
+ const n=Number(raw),t=document.getElementById("ut").value;let result,label;  
+ if(t==="mft"){result=n*3.28084;label="feet"}else if(t==="ftm"){result=n/3.28084;label="metre"}else if(t==="mm"){result=n*1000;label="millimetres"}else if(t==="m2ft2"){result=n*10.7639;label="ft²"}else{result=n*1000;label="litres"}  
+ out("unitResult","<b>Result:</b> "+result.toLocaleString("en-IN",{maximumFractionDigits:4})+" "+label);  
+}  
+</script>  </body>  
+</html>
