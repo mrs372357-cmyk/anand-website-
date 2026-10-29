@@ -1,197 +1,48 @@
-<!DOCTYPE html>
-<html lang="kn">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="ANAND Civil Engineering Tools: Building measurements, concrete calculator and civil engineering notes.">
-<title>ANAND | Civil Engineering Tools</title>
+ANAND Civil Engineering
+ನಿಮ್ಮ Civil Engineering ಕೆಲಸಗಳಿಗೆ ಸರಳ Tools 🏗️
 
-<style>
-*{box-sizing:border-box}
-body{
-  margin:0;font-family:Arial,sans-serif;
-  background:#f1f5f9;color:#172033;line-height:1.6
-}
-header{
-  background:#102a43;color:white;text-align:center;
-  padding:25px 12px
-}
-header h1{margin:0;color:#38d9ff;font-size:30px}
-header p{margin:5px 0}
-nav{
-  display:flex;justify-content:center;flex-wrap:wrap;
-  gap:8px;padding:12px;background:#183b56
-}
-nav a{
-  color:white;text-decoration:none;padding:8px 12px;
-  border-radius:8px;background:#285577
-}
-main{max-width:850px;margin:auto;padding:15px}
-.card{
-  background:white;margin:18px 0;padding:20px;
-  border-radius:14px;box-shadow:0 3px 12px #0000000c
-}
-h2{color:#145da0;margin-top:0}
-label{display:block;font-weight:bold;margin-top:12px}
-input,select{
-  width:100%;padding:12px;margin-top:5px;
-  border:1px solid #b8c5d1;border-radius:8px;
-  font-size:16px;background:white
-}
-button{
-  margin-top:14px;padding:12px 16px;
-  background:#087e8b;color:white;border:0;
-  border-radius:8px;font-size:16px;cursor:pointer
-}
-.result{
-  margin-top:15px;padding:14px;border-radius:8px;
-  background:#e1f5fe;overflow-wrap:anywhere
-}
-.note{background:#f8fafc;padding:12px;border-left:4px solid #087e8b;margin:10px 0}
-.small{font-size:13px;color:#526274}
-footer{text-align:center;background:#102a43;color:white;padding:18px}
-</style>
-</head>
+📏 Measurements
+🧮 Concrete
+📚 Civil Notes
+📏 Building Measurements
+ಉದ್ದ ಮತ್ತು ಅಗಲ ಕೊಟ್ಟು ನೆಲದ Area ಲೆಕ್ಕ ಹಾಕಿ.
 
-<body>
-<header>
-  <h1>ANAND Civil Engineering</h1>
-  <p>ನಿಮ್ಮ Civil Engineering ಕೆಲಸಗಳಿಗೆ ಸರಳ Tools 🏗️</p>
-</header>
+ಉದ್ದ (Length — metre)
+ಉದಾ: 10
+ಅಗಲ (Width — metre)
+ಉದಾ: 5
+ಎತ್ತರ (Height — metre), Volumeಗೆ
+ಉದಾ: 3
+ Calculate Area & Volume
+ಫಲಿತಾಂಶ ಇಲ್ಲಿ ಕಾಣಿಸುತ್ತದೆ.
+🧮 Concrete Volume Calculator
+Slab, Beam ಅಥವಾ Footingನ ಸರಳ ಆಯತಾಕಾರದ ಭಾಗಕ್ಕೆ ಲೆಕ್ಕ ಹಾಕಿ.
 
-<nav>
-  <a href="#measure">📏 Measurements</a>
-  <a href="#concrete">🧮 Concrete</a>
-  <a href="#notes">📚 Civil Notes</a>
-</nav>
+ಉದ್ದ (metre)
+ಉದಾ: 5
+ಅಗಲ (metre)
+ಉದಾ: 3
+ದಪ್ಪ / ಎತ್ತರ (metre)
+ಉದಾ: 0.12
+ Calculate Concrete
+ಫಲಿತಾಂಶ ಇಲ್ಲಿ ಕಾಣಿಸುತ್ತದೆ.
+ಇದು ಜ್ಯಾಮಿತೀಯ Volume ಮಾತ್ರ. ನಿಜವಾದ ನಿರ್ಮಾಣಕ್ಕೆ Structural Engineerನ drawing, specifications ಮತ್ತು site conditions ಅನುಸರಿಸಬೇಕು.
 
-<main>
+📚 Civil Engineering Notes
+1. Rectangle Area
+Area = Length × Width
+ಘಟಕ: square metre (m²)
+2. Cuboid Volume
+Volume = Length × Width × Height
+ಘಟಕ: cubic metre (m³)
+3. Concrete Volume
+ಆಯತಾಕಾರದ Slabಗೆ: Length × Width × Thickness
+4. Unit Conversion
+1 metre = 1000 millimetres
+1 square metre = 10.7639 square feet (ಸುಮಾರು)
+1 cubic metre = 1000 litres
+5. Concrete Mix
+Mix ratio ಮತ್ತು Cement, Sand, Aggregate ಪ್ರಮಾಣವು ನಿರ್ದಿಷ್ಟ Mix Design ಹಾಗೂ Project Specification ಮೇಲೆ ಅವಲಂಬಿತ. ಕೇವಲ ಸಾಮಾನ್ಯ ratio ಆಧರಿಸಿ Structural Concrete ನಿರ್ಧರಿಸಬೇಡಿ.
+© 2026 ANAND Civil Engineering
 
-<section class="card" id="measure">
-  <h2>📏 Building Measurements</h2>
-  <p>ಉದ್ದ ಮತ್ತು ಅಗಲ ಕೊಟ್ಟು ನೆಲದ Area ಲೆಕ್ಕ ಹಾಕಿ.</p>
-
-  <label for="length">ಉದ್ದ (Length — metre)</label>
-  <input id="length" type="number" min="0" step="any" placeholder="ಉದಾ: 10">
-
-  <label for="width">ಅಗಲ (Width — metre)</label>
-  <input id="width" type="number" min="0" step="any" placeholder="ಉದಾ: 5">
-
-  <label for="height">ಎತ್ತರ (Height — metre), Volumeಗೆ</label>
-  <input id="height" type="number" min="0" step="any" placeholder="ಉದಾ: 3">
-
-  <button onclick="measure()">Calculate Area & Volume</button>
-  <div class="result" id="measureResult" aria-live="polite">
-    ಫಲಿತಾಂಶ ಇಲ್ಲಿ ಕಾಣಿಸುತ್ತದೆ.
-  </div>
-</section>
-
-<section class="card" id="concrete">
-  <h2>🧮 Concrete Volume Calculator</h2>
-  <p>Slab, Beam ಅಥವಾ Footingನ ಸರಳ ಆಯತಾಕಾರದ ಭಾಗಕ್ಕೆ ಲೆಕ್ಕ ಹಾಕಿ.</p>
-
-  <label for="clength">ಉದ್ದ (metre)</label>
-  <input id="clength" type="number" min="0" step="any" placeholder="ಉದಾ: 5">
-
-  <label for="cwidth">ಅಗಲ (metre)</label>
-  <input id="cwidth" type="number" min="0" step="any" placeholder="ಉದಾ: 3">
-
-  <label for="cheight">ದಪ್ಪ / ಎತ್ತರ (metre)</label>
-  <input id="cheight" type="number" min="0" step="any" placeholder="ಉದಾ: 0.12">
-
-  <button onclick="concrete()">Calculate Concrete</button>
-  <div class="result" id="concreteResult" aria-live="polite">
-    ಫಲಿತಾಂಶ ಇಲ್ಲಿ ಕಾಣಿಸುತ್ತದೆ.
-  </div>
-  <p class="small">
-    ಇದು ಜ್ಯಾಮಿತೀಯ Volume ಮಾತ್ರ. ನಿಜವಾದ ನಿರ್ಮಾಣಕ್ಕೆ Structural Engineerನ
-    drawing, specifications ಮತ್ತು site conditions ಅನುಸರಿಸಬೇಕು.
-  </p>
-</section>
-
-<section class="card" id="notes">
-  <h2>📚 Civil Engineering Notes</h2>
-
-  <div class="note">
-    <b>1. Rectangle Area</b><br>
-    Area = Length × Width<br>
-    ಘಟಕ: square metre (m²)
-  </div>
-
-  <div class="note">
-    <b>2. Cuboid Volume</b><br>
-    Volume = Length × Width × Height<br>
-    ಘಟಕ: cubic metre (m³)
-  </div>
-
-  <div class="note">
-    <b>3. Concrete Volume</b><br>
-    ಆಯತಾಕಾರದ Slabಗೆ: Length × Width × Thickness
-  </div>
-
-  <div class="note">
-    <b>4. Unit Conversion</b><br>
-    1 metre = 1000 millimetres<br>
-    1 square metre = 10.7639 square feet (ಸುಮಾರು)<br>
-    1 cubic metre = 1000 litres
-  </div>
-
-  <div class="note">
-    <b>5. Concrete Mix</b><br>
-    Mix ratio ಮತ್ತು Cement, Sand, Aggregate ಪ್ರಮಾಣವು
-    ನಿರ್ದಿಷ್ಟ Mix Design ಹಾಗೂ Project Specification ಮೇಲೆ ಅವಲಂಬಿತ.
-    ಕೇವಲ ಸಾಮಾನ್ಯ ratio ಆಧರಿಸಿ Structural Concrete ನಿರ್ಧರಿಸಬೇಡಿ.
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <p>© 2026 ANAND Civil Engineering</p>
-  <p>Learn • Measure • Build</p>
-</footer>
-
-<script>
-function getPositive(ids){
-  const values = ids.map(id => document.getElementById(id).value.trim());
-  if(values.some(v => v === "")) return null;
-  const nums = values.map(Number);
-  if(nums.some(v => !Number.isFinite(v) || v <= 0)) return null;
-  return nums;
-}
-
-function measure(){
-  const v = getPositive(["length","width","height"]);
-  const out = document.getElementById("measureResult");
-
-  if(!v){
-    out.textContent = "ದಯವಿಟ್ಟು ಎಲ್ಲಾ ಅಳತೆಗಳನ್ನು 0ಕ್ಕಿಂತ ಹೆಚ್ಚಿನ ಸಂಖ್ಯೆಯಲ್ಲಿ ನಮೂದಿಸಿ.";
-    return;
-  }
-
-  const [l,w,h] = v;
-  out.innerHTML =
-    "<b>Area:</b> " + (l*w).toFixed(3) + " m²<br>" +
-    "<b>Volume:</b> " + (l*w*h).toFixed(3) + " m³<br>" +
-    "<b>Area in square feet:</b> " + (l*w*10.7639).toFixed(2) + " ft²";
-}
-
-function concrete(){
-  const v = getPositive(["clength","cwidth","cheight"]);
-  const out = document.getElementById("concreteResult");
-
-  if(!v){
-    out.textContent = "ದಯವಿಟ್ಟು ಎಲ್ಲಾ ಅಳತೆಗಳನ್ನು 0ಕ್ಕಿಂತ ಹೆಚ್ಚಿನ ಸಂಖ್ಯೆಯಲ್ಲಿ ನಮೂದಿಸಿ.";
-    return;
-  }
-
-  const [l,w,h] = v;
-  const volume = l*w*h;
-
-  out.innerHTML =
-    "<b>Concrete Volume:</b> " + volume.toFixed(3) + " m³<br>" +
-    "<b>Volume in litres:</b> " + (volume*1000).toFixed(1) + " L";
-}
-</script>
-</body>
-</html>
+Learn • Measure • Build
